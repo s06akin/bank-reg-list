@@ -1,1 +1,1 @@
-bank-reg-list: python3 bank-reg-list.py
+bank-reg-list: python bank-reg-list.py
