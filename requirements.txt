@@ -7,3 +7,4 @@ idna==3.2
 charset-normalizer==2.0.4
 certifi==2021.5.30
 tzlocal==2.1
+lxml==4.6.3
