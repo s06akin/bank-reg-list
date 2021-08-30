@@ -34,7 +34,6 @@ def scheduled_job():
             reg.append(result[index])
         
     
-    curl -u sunnyasobakin@gmail.com:oxK6Ukzz5ve3AE -d "secTok=.AG5fkS8AcZDgmlkM8txbl3KN54YTNJbh2Q==" https://accounts.google.com/DisplayUnlockCaptcha
     smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
     smtpObj.starttls()
     smtpObj.login('sunnyasobakin@gmail.com','oxK6Ukzz5ve3AE')
