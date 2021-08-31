@@ -36,7 +36,7 @@ def scheduled_job():
     
     smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
     smtpObj.starttls()
-    smtpObj.login('sunnyasobakin@gmail.com','oxK6Ukzz5ve3AE')
+    smtpObj.login('sunnyasobakin@gmail.com','kdvteoxtngppxkxz')
     
     message = '\n\n'.join(["Subject: bank_list", "\r\n".join(reg)])
     smtpObj.sendmail("sunnyasobakin@gmail.com","sunnyasobakin@gmail.com", message)
