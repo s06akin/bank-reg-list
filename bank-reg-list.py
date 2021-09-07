@@ -39,7 +39,6 @@ def scheduled_job():
     smtpObj.login('sunnyasobakin@gmail.com','kdvteoxtngppxkxz')
     
     message = '\n\n'.join(["Subject: bank_list", "\r\n".join(reg)])
-    smtpObj.sendmail("sunnyasobakin@gmail.com","sunnyasobakin@gmail.com", message)
-    # ta_exch_mon_sis@nsd.ru
+    smtpObj.sendmail("sunnyasobakin@gmail.com","ta_exch_mon_sis@nsd.ru", message)
 
 sched.start()
