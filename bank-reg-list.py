@@ -36,14 +36,18 @@ def scheduled_job():
     moratoriy_response = requests.get(moratoriy_url)
     moratoriy_soup = BeautifulSoup(moratoriy_response.text, 'lxml')
     moratoriy_find_dropdown = moratoriy_soup.find('div', id='DropDown_content')
-    moratoriy_find_table = moratoriy_find_dropdown.find('table')
-    moratoriy_find_reg = moratoriy_find_table.find_all('td', width='60px')
 
-    moratoriy_reg = [el.text.strip() for el in moratoriy_find_reg] 
+    try:
+        moratoriy_find_table = moratoriy_find_dropdown.find('table')
+        moratoriy_find_reg = moratoriy_find_table.find_all('td', width='60px')
+        moratoriy_reg = [el.text.strip() for el in moratoriy_find_reg] 
+    
+        if len(moratoriy_reg) != 0:
+            for index in range(len(moratoriy_reg)):
+                reg.append(moratoriy_reg[index])
 
-    if len(moratoriy_reg) != 0:
-        for index in range(len(moratoriy_reg)):
-            reg.append(moratoriy_reg[index])
+    except AttributeError:
+        pass
         
     
     smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
